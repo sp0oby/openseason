@@ -1,0 +1,1482 @@
+<!doctype html>
+<html lang = "ko">
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "initial-scale = 1, minimum-scale = 1">
+    
+    <link rel = "icon" href = "imgs/page_icon.png">
+    <title>OpenSeason by Fractional Uprising Studios</title>
+    
+
+    <body id = "body_t" class = "body_t">
+        <style>
+        @font-face
+        { 
+        font-family : customfont;
+        src: url(etc/BM_hanna_air.ttf);
+        }
+        
+        div
+        {
+        font-family: customfont;
+        }
+
+        
+        .body_t
+        {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-y: hidden;
+        }
+        </style>
+        
+        <div class = "full_background">
+            <div class = "first_theme_bg">
+                <style>
+                    .full_background
+                    {
+                    background : #02050C;
+                    width : var(--window_width);
+                    margin-left: -8px;
+                    }
+                </style>
+            </div>
+            
+            <div class = "first_theme">
+                <div class = "trailer_bg" id = "trailer_bg" style = "opacity : 1; filter : blur(50px); transition : filter 1s">
+                    <video id = "trailer_video" class = "trailer_video" autoplay muted loop playsinline control preload = "auto" width = "1920" height = "1080">
+                    <source src = "imgs/Project wak website trailer.mp4" type = "video/mp4" loading = "eager">
+                    </video>
+                     
+                    <script src = "https://code.jquery.com/jquery-3.3.1.js">
+                    </script>
+                    
+                    <script type = "text/javascript">
+                        $(window).scroll(function()
+                        {
+                        var scroll = $(window).scrollTop();
+                            if (scroll > 64)
+                            {
+                                $('.trailer_bg').css(
+                                {
+                                filter : "blur(" + (scroll*0.05) + "px)",
+                                opacity : (1 - scroll*0.0015)
+                                })
+                            }
+                            else
+                            {
+                                $('.trailer_bg').css(
+                                {
+                                filter : "blur(0px)",
+                                opacity : 1
+                                })
+                            }
+                        })
+                    </script>
+                </div>
+                
+
+            
+                <div class = "info_f">
+                <h1 id = "title" class = "title" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">OpenSeason</h1>
+                <h2 id = "title_small1" class = "title_small1" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">ALPHA</h2>
+                <p id = "desc_first" class = "desc_first" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">Fractional Uprising Studios presents a third <br>person shooter pinning various NFT communites<br>against each other in a multiplayer battle royale!</p>
+                
+                    <div id = "reviews" class = "reviews" style = "transition : width 0.8s">
+                    <p id = "review1" class = "review1" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">"Don't Sleep on Fractional Uprising Studios and OpenSeason"</p>
+                    <p id = "review2" class = "review2" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">"I Can't Wait to Murk Some Apes"</p>
+                    <p id = "review3" class = "review3" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">"The Team Almost Went to Jail for Making This Game"</p>
+                    <p id = "review4" class = "review4" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">"Don't Sleep on This, Anon"</p>
+                    <span class = "reviewer_blinder" style = "transition : width 0.8s; opacity : 1; margin-bottom : -32px; background : white; width : 500px; height : 32px;"></span>
+                    <p id = "reviewer" class = "reviewer" style = "transition : opacity 0.5s; opacity : 0">- Many High IQ Gamers on Twitter -</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+            
+
+            <style>
+                .trailer_bg
+                {
+                margin-left : var(--trailer_bg_margin_left);
+                margin-top : var(--text_m32px);
+                width : var(--window_width);
+                opacity : 1;
+                position : absolute;
+                transition : filter 0.1s;
+                transition : opacity 0.1s;
+                }
+
+            
+                .title
+                {
+                position : absolute;
+                display: block;
+                font-size : var(--text_size);
+                color : white;
+                text-align: left;
+                padding : 52px;
+                margin : 32px;
+                margin-bottom : -96px;
+                margin-top : var(--text_margin_top_s);
+                margin-left : var(--title_margin);
+                top : 32px;
+                }
+                
+                .title_small1
+                {
+                position : absolute;
+                font-size : var(--text_48px);
+                color : #AD8264;
+                text-align: var(--text_title_s_align);
+                padding : 64px;
+                line-height : 0px;
+                margin : 64px;
+                margin-left: var(--text_margin_left_s);
+                margin-top : -48px;
+                margin-bottom : 64px;
+                top : 292px;
+                }
+                
+                .desc_first
+                {
+                position : absolute;
+                font-size : var(--text_16px);
+                font : "Open Sans";
+                color : #E0C9A8;
+                text-align: left;
+                padding : 11px;
+                margin-top : -100px;
+                margin-left: var(--desc_margin);
+                top : 482px;
+                }
+                
+                .first_theme
+                {
+                width : var(--window_width);
+                margin-left : 0px;
+                margin-right : 0px;
+                background : #ffffff00;
+                height : 640px;
+                opacity : 1;
+                transition : filter 0.5s;
+                }
+                
+                .reviews
+                {
+                position : absolute;
+                color : #E0C9A8;
+                font-size : var(--text_17_5px);
+                font : "Open Sans";
+                font-weight : bold;
+                text-align : center;
+                background : #0C1019;
+                margin-top : 1200px;
+                width : 0px;
+                height : 325px;
+                margin-left : 0px;
+                top : 32px;
+                }
+                
+                .review1
+                {
+                margin-top : 48px;
+                text-align : center;
+                }
+                
+                .review2
+                {
+                color : white;
+                text-align : center;
+                }
+                
+                .review4
+                {
+                color : white;
+                text-align : center;
+                }
+                
+                .reviewer
+                {
+                position : absolute;
+                color : #AD8264;
+                font-size : var(--text_16px);
+                font : "Open Sans";
+                font-weight : bold;
+                text-align : center;
+                margin-top : 52px;
+                width : var(--window_width);
+                }
+            </style>
+            
+            
+            <div id = "select_menu" class = "select_menu" style = "transition : width 0.8s;">
+                <style>
+                    li
+                    {
+                    list-style : none;
+                    }
+                
+                    .select_menu
+                    {
+                    width : 0px;
+                    margin-left : 0px;
+                    margin-right : 0px;
+                    background : #0C1019;
+                    height : 1600px;
+                    margin-bottom : -500px;
+                    }
+                    
+                    .title_sec
+                    {
+                    font-size : var(--text_64px);
+                    font : "Open Sans";
+                    color : #E0C9A8;
+                    text-align: left;
+                    padding : 64px;
+                    margin : 32px;
+                    margin-top : 1200px;
+                    margin-left: 24px;
+                    top : 32px;
+                    }
+                    
+                    .title_sec_small
+                    {
+                    font-size : var(--text_32px);
+                    font : "Open Sans";
+                    color : #AD8264;
+                    text-align: left;
+                    padding : 64px;
+                    margin : 32px;
+                    margin-top : -160px;
+                    margin-left: 24px;
+                    margin-bottom : 64px;
+                    height : 64px;
+                    top : 32px;
+                    }
+                    
+                    .title_thi
+                    {
+                    font-size : var(--text_64px);
+                    font : "Open Sans";
+                    color : #E0C9A8;
+                    text-align: left;
+                    padding : 64px;
+                    margin : 32px;
+                    margin-top : 1800px;
+                    margin-left: 24px;
+                    }
+                    
+                    .title_thi_small
+                    {
+                    font-size : var(--text_32px);
+                    font : "Open Sans";
+                    color : #AD8264;
+                    text-align: left;
+                    padding : 64px;
+                    margin : 32px;
+                    margin-top : -160px;
+                    margin-left: 24px;
+                    margin-bottom : 64px;
+                    height : 64px;
+                    }
+                    
+                    .showcase1_button1
+                    {
+                    cursor : pointer;
+                    background-color : #AD8264; 
+                    width : var(--text_12px);
+                    height : var(--text_12px);
+                    border-radius: 6px;
+                    margin-top : 24px;
+                    margin-bottom : 0px;
+                    margin-left : 45.5%;
+                    transition : background 0.2s;
+                    }
+                    
+                    .showcase1_button2
+                    {
+                    cursor : pointer;
+                    background-color : #E0C9A8; 
+                    width : var(--text_12px);
+                    height : var(--text_12px);
+                    border-radius: 6px;
+                    margin-top : var(--text_m12px);
+                    margin-bottom : 0px;
+                    margin-left : 48.5%;
+                    transition : background 0.2s;
+                    }
+                    
+                    .showcase1_button3
+                    {
+                    cursor : pointer;
+                    background-color : #E0C9A8; 
+                    width : var(--text_12px);
+                    height : var(--text_12px);
+                    border-radius: 6px;
+                    margin-top : var(--text_m12px);
+                    margin-bottom : 0px;
+                    margin-left : 51.5%;
+                    transition : background 0.2s;
+                    }
+                    
+                    .showcase1_button4
+                    {
+                    cursor : pointer;
+                    background-color : #E0C9A8; 
+                    width : var(--text_12px);
+                    height : var(--text_12px);
+                    border-radius: 6px;
+                    margin-top : var(--text_m12px);
+                    margin-bottom : 0px;
+                    margin-left : 54.5%;
+                    transition : background 0.2s;
+                    }
+
+                    
+                    .showcase1_image
+                    {
+                    text-align : center;
+                    display : block;
+                    width : 400vw;
+                    margin-left : -8px;
+                    transition : transform 0.4s;
+                    }
+                    
+                    .inner
+                    {
+                    width : 100vw;
+                    float : left;
+                    }
+                    
+                    .showcase_real_img
+                    {
+                    width : var(--img_width);
+                    height : var(--img_height);
+                    }
+                
+                </style>
+                
+                <div class = "select_menu_title">
+                    <h1 id = "title_sec" class = "title_sec" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">OpenSeason</h1>
+                    <h2 id = "title_sec_small" class = "title_sec_small" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">Gameplay</h2>
+                </div>
+                
+                <style>
+                    .showcase_theme_button1
+                    {
+                    cursor : pointer;
+                    background-color : #AD8264; 
+                    width : var(--text_16px);
+                    height : var(--text_16px);
+                    border-radius: 6px;
+                    margin-top : -128px;
+                    margin-bottom : 0px;
+                    margin-left : 90px;
+                    transition : background 0.2s;
+                    }
+                    
+                    .showcase_theme_button2
+                    {
+                    cursor : pointer;
+                    background-color : #E0C9A8; 
+                    width : var(--text_16px);
+                    height : var(--text_16px);
+                    border-radius: 6px;
+                    margin-top : var(--text_m12px);
+                    margin-bottom : 0px;
+                    margin-left : 120px;
+                    transition : background 0.2s;
+                    }
+                    
+                    .showcase_theme_button3
+                    {
+                    cursor : pointer;
+                    background-color : #E0C9A8; 
+                    width : var(--text_16px);
+                    height : var(--text_16px);
+                    border-radius: 6px;
+                    margin-top : var(--text_m12px);
+                    margin-bottom : 0px;
+                    margin-left : 150px;
+                    transition : background 0.2s;
+                    }
+                    
+                    .showcase_theme_button4
+                    {
+                    cursor : pointer;
+                    background-color : #E0C9A8; 
+                    width : var(--text_16px);
+                    height : var(--text_16px);
+                    border-radius: 6px;
+                    margin-top : var(--text_m12px);
+                    margin-bottom : 0px;
+                    margin-left : 180px;
+                    transition : background 0.2s;
+                    }
+                    
+                    .showcase_2
+                    {
+                    margin-top : -963px;
+                    transform : translate(-100vw);
+                    }
+                    
+                    .showcase_3
+                    {
+                    margin-top : -963px;
+                    transform : translate(-100vw);
+                    }
+                    
+                    .showcase_4
+                    {
+                    margin-top : -963px;
+                    transform : translate(-100vw);
+                    }
+                </style>
+                
+                    
+                <div class = "showcase_1">
+                    <div style = "overflow : hidden">
+                        <div id = "showcase1_image" class = "showcase1_image" style = "transition : opacity 0.8s; opacity : 0">
+                            <div class = "inner">
+                            <img class = "showcase_real_img" src = "imgs/test1.gif" loading = "lazy">
+                            </div>
+                            
+                            <div class = "inner">
+                            <img class = "showcase_real_img" src = "imgs/test2.gif" loading = "lazy">
+                            </div>
+                            
+                            <div class = "inner">
+                            <img class = "showcase_real_img" src = "imgs/test3.gif" loading = "lazy">
+                            </div>
+                            
+                            <div class = "inner">
+                            <img class = "showcase_real_img" src = "imgs/test4.gif" loading = "lazy">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id = "selector_buttons" class = "selector_buttons" style = "transition : opacity 0.8s; opacity : 0">
+                        <li>
+                            <div class = "showcase1_button1"></div>
+                            <div class = "showcase1_button2"></div>
+                            <div class = "showcase1_button3"></div>
+                            <div class = "showcase1_button4"></div>
+                        </li>
+            
+                        
+                        <script>
+                        document.querySelector(".showcase1_button1").addEventListener("click",function()
+                        {
+                        document.querySelector(".showcase1_image").style.transform = "translate(0vw)"
+                        document.querySelector(".showcase1_button1").style.background = "#AD8264"
+                        document.querySelector(".showcase1_button2").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button3").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button4").style.background = "#E0C9A8"
+                        })
+                        
+                        document.querySelector(".showcase1_button2").addEventListener("click",function()
+                        {
+                        document.querySelector(".showcase1_image").style.transform = "translate(-100vw)"
+                        document.querySelector(".showcase1_button1").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button2").style.background = "#AD8264"
+                        document.querySelector(".showcase1_button3").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button4").style.background = "#E0C9A8"
+                        })
+                        
+                        document.querySelector(".showcase1_button3").addEventListener("click",function()
+                        {
+                        document.querySelector(".showcase1_image").style.transform = "translate(-200vw)"
+                        document.querySelector(".showcase1_button1").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button2").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button3").style.background = "#AD8264"
+                        document.querySelector(".showcase1_button4").style.background = "#E0C9A8"
+                        })
+                        
+                        document.querySelector(".showcase1_button4").addEventListener("click",function()
+                        {
+                        document.querySelector(".showcase1_image").style.transform = "translate(-300vw)"
+                        document.querySelector(".showcase1_button1").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button2").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button3").style.background = "#E0C9A8"
+                        document.querySelector(".showcase1_button4").style.background = "#AD8264"
+                        })
+                        </script>
+                    </div>
+                
+                    
+                    
+                    
+                    <style>
+                        .under_box_selector_buttons
+                        {
+                        margin-left : 50%;
+                        height : 360px;
+                        }
+                        
+                        .in_box_text
+                        {
+                        background : #0C1019;
+                        font-size : var(--text_16px);
+                        font : "Open Sans";
+                        text-align: center;
+                        color : #AD8264;
+                        margin-top : 32px;
+                        margin-left : -100%;
+                        margin-bottom : 32px;
+                        }
+                        
+                        .first_text_accent
+                        {
+                        font-size : var(--text_32px);
+                        font : "Open Sans";
+                        font-weight :bold;
+                        margin-right: -12px;
+                        color : #E0C9A8;
+                        }
+                        
+                        .text_accent
+                        {
+                        color : #E0C9A8;
+                        font-size : var(--text_17_5px);
+                        font : "Open Sans";
+                        font-weight :bold;
+                        }
+                    </style>
+                        
+                    <div id = "under_box_selector_buttons" class = "under_box_selector_buttons" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">
+                        <div id = "in_box_text" class = "in_box_text" style = "transition : width 0.8s;">
+                            <!-- theme 1 -->
+                            <span class = "first_text_accent">
+                            Hi,
+                            </span>
+                            
+                            <span>
+                            If you want to play <span class = "text_accent">OpenSeason</span> you must hold a FU STUDIOS membership.<br><br>You can mint a membership on <span class = "text_accent">SCATTER. </span>Once verfied,<br><br>you can compete against other players, <span class = "text_accent">and earn $FU Money</span> by waging and winning<br><br>against all your opponents. <span class = "text_accent">Good luck, Milady.</span> And have fun.<br><br><br><br><br><br>
+                            </span>
+                            
+                            <!-- theme 2 -->
+                            <span>
+                            <span class = "text_accent">Where?<br><br></span>You can download OpenSeason on the EPIC STORE.<br>The ALPHA launch is coming soon.<br><br><br><br>
+                            </span>
+                            
+                            <!-- theme 3-->
+                            <span>
+                            <span class = "text_accent">Roadmap?<br><br></span>Follow our Twitter and Discord<br>to stay up to date!<br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <style>
+                    .showcase1_trailer_button
+                    {
+                    cursor : pointer;
+                    background-color : #547282; 
+                    color : white;
+                    margin-left : var(--trailer_button_pos);
+                    font-size : var(--text_24px);
+                    transition : background 0.2s;
+                    font-weight : bold;
+                    text-align : center;
+                    border : 2px solid #547282;
+                    padding-left : var(--text_24px);
+                    padding-right : var(--text_24px);
+                    padding-top : var(--text_10px);
+                    padding-bottom : var(--text_10px);
+                    text-decoration : none;
+                    position : absolute;
+                    line-height : var(--text_28px);
+                    margin-top : var(--text_270px);
+                    }
+                    
+                    .showcase1_code_button
+                    {
+                    cursor : pointer;
+                    background-color : #0C1019;
+                    color : white;
+                    margin-left : 51%;
+                    font-size : var(--text_24px);
+                    transition : background 0.2s;
+                    font-weight : bold;
+                    text-align : center;
+                    border : 2px solid #2E465C;
+                    padding-left : var(--text_28px);
+                    padding-right : var(--text_28px);
+                    padding-top : var(--text_10px);
+                    padding-bottom : var(--text_10px);
+                    text-decoration : none;
+                    line-height : var(--text_28px);;
+                    position : absolute;
+                    margin-top : var(--text_270px);
+                    }
+                    
+                    .mobile_mode_margin
+                    {
+                    margin-bottom : var(--showcase_title_margin);
+                    }
+                    
+                    .mobile_mode_margin2
+                    {
+                    margin-bottom : var(--showcase_title_margin2);
+                    }
+                    </style>
+                    
+                    <li>
+                        <a id = "showcase1_trailer_button" class = "showcase1_trailer_button" href = "https://youtu.be/paVm1zzhGYQ" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">
+                        Trailer
+                        </a>
+                        
+                        <a id = "showcase1_code_button" class = "showcase1_code_button" href = "https://store.epicgames.com/en-US/" style = "transition : opacity 0.8s, top 0.8s; opacity : 0">
+                        Download
+                        </a>
+                    </li>
+                    
+                    <script>
+                    document.querySelector(".showcase1_trailer_button").addEventListener("mouseover",function()
+                    {
+                    document.querySelector(".showcase1_trailer_button").style.background = "#446A83"
+                    document.querySelector(".showcase1_trailer_button").style.border = "2px solid #446A83"
+                    })
+                    
+                    document.querySelector(".showcase1_trailer_button").addEventListener("mouseleave",function()
+                    {
+                    document.querySelector(".showcase1_trailer_button").style.background = "#547282"
+                    document.querySelector(".showcase1_trailer_button").style.border = "2px solid #547282"
+                    })
+                    
+                    document.querySelector(".showcase1_code_button").addEventListener("mouseover",function()
+                    {
+                    document.querySelector(".showcase1_code_button").style.background = "#2E465C"
+                    })
+                    
+                    document.querySelector(".showcase1_code_button").addEventListener("mouseleave",function()
+                    {
+                    document.querySelector(".showcase1_code_button").style.background = "#0C1019"
+                    })
+                    </script>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <div class = "theme_selector">
+                <style>
+                .theme_selector_button1
+                {
+                background-color : var(--theme_selector1_bg); 
+                border : 2px solid var(--theme_selector1_bg);
+                margin-left : var(--theme_selector1_pos);
+                text-align : center;
+                cursor : pointer;
+                position : fixed;
+                transition : background 0.2s;
+                width : 60px;
+                height : 36px;
+                top : 32px;
+                color : white;
+                font-weight : bold;
+                font-size : var(--text_16px);
+                line-height : 34px;
+                border-radius : 12px;
+                margin-top : var(--theme_selector_margin);
+                }
+                
+                .theme_selector_button2
+                {
+                background-color : #ffffff00; 
+                border : 2px solid #ffffff00;
+                margin-left : var(--theme_selector2_pos);
+                text-align : center;
+                cursor : pointer;
+                position : fixed;
+                transition : color 0.2s;
+                width : 60px;
+                height : 36px;
+                top : 32px;
+                color : white;
+                font-weight : bold;
+                font-size : var(--text_16px);
+                line-height : 34px;
+                border-radius : 12px;
+                margin-top : var(--theme_selector_margin);
+                }
+                
+                .theme_selector_button3
+                {
+                background-color : #ffffff00; 
+                border : 2px solid #ffffff00;
+                margin-left : var(--theme_selector3_pos);
+                text-align : center;
+                cursor : pointer;
+                position : fixed;
+                transition : color 0.2s;
+                width : 60px;
+                height : 36px;
+                top : 32px;
+                color : white;
+                font-weight : bold;
+                font-size : var(--text_16px);
+                line-height : 34px;
+                border-radius : 12px;
+                margin-top : var(--theme_selector_margin);
+                }
+                
+                .theme_selector_button4
+                {
+                background-color : #ffffff00; 
+                border : 2px solid #ffffff00;
+                margin-left : var(--theme_selector4_pos);
+                text-align : center;
+                cursor : pointer;
+                position : fixed;
+                transition : color 0.2s;
+                width : 120px;
+                height : 36px;
+                top : 32px;
+                color : white;
+                font-weight : bold;
+                font-size : var(--text_16px);
+                line-height : 34px;
+                border-radius : 12px;
+                text-decoration : none;
+                transition : color 0.2s;
+                color : white;
+                margin-top : var(--theme_selector_margin);
+                }
+                
+                
+                
+                
+                .theme_selector_button5
+                {
+                background-color : #ffffff00; 
+                border : 2px solid #ffffff00;
+                margin-left : var(--theme_selector5_pos);
+                text-align : center;
+                cursor : pointer;
+                position : fixed;
+                transition : color 0.2s;
+                width : 120px;
+                height : 36px;
+                top : 32px;
+                color : white;
+                font-weight : bold;
+                font-size : var(--text_16px);
+                line-height : 34px;
+                border-radius : 12px;
+                text-decoration : none;
+                transition : color 0.2s;
+                color : white;
+                margin-top : var(--theme_selector_margin);
+                }
+                </style>
+
+                <div id = "theme_selector_button1" class = "theme_selector_button1" style = "transition : opacity 0.8s; opacity : 0">
+                    Main
+                </div>
+                
+                <div id = "theme_selector_button2" class = "theme_selector_button2" style = "transition : opacity 0.8s; opacity : 0">
+                    Download
+                </div>
+                
+                <a class = "source_code_link" href = "https://twitter.com/opunshizun">
+                    <div id = "theme_selector_button4" class = "theme_selector_button4" style = "transition : opacity 0.8s; opacity : 0">
+                    Twitter
+                    </div>
+                </a>
+                
+                <a class = "wiki_link" href = "https://discord.com/invite/fxyyZCTaBS">
+                    <div id = "theme_selector_button5" class = "theme_selector_button5" style = "transition : opacity 0.8s; opacity : 0">
+                    Discord
+                    </div>
+                </a>
+
+                <div id="theme_selector_button3" class="theme_selector_button3" style="transition: opacity 0.8s; opacity: 0">
+                    <a href="privacy.html" class="privacy_link">Privacy</a>
+                </div>
+                
+                
+                <script>
+                    if (window.innerWidth < 975)
+                    {
+                    document.querySelector(".theme_selector_button1").addEventListener("mouseover",function()
+                    {
+                    document.querySelector(".theme_selector_button1").style.color = "#E7D2B5"
+                    })
+                    
+                    document.querySelector(".theme_selector_button1").addEventListener("mouseleave",function()
+                    {
+                    document.querySelector(".theme_selector_button1").style.color = "white"
+                    })
+                    }
+                    else
+                    {
+                    document.querySelector(".theme_selector_button1").addEventListener("mouseover",function()
+                    {
+                    document.querySelector(".theme_selector_button1").style.background = "#446A83"
+                    document.querySelector(".theme_selector_button1").style.border = "2px solid #446A83"
+                    })
+                    
+                    document.querySelector(".theme_selector_button1").addEventListener("mouseleave",function()
+                    {
+                    document.querySelector(".theme_selector_button1").style.background = "#547282"
+                    document.querySelector(".theme_selector_button1").style.border = "2px solid #547282"
+                    })
+                    }
+                
+                document.querySelector(".theme_selector_button1").addEventListener("click",function()
+                {
+                window.scroll({top:0, behavior : "smooth"})
+                })
+                
+                
+                
+                document.querySelector(".theme_selector_button2").addEventListener("mouseover",function()
+                {
+                document.querySelector(".theme_selector_button2").style.color = "#E7D2B5"
+                })
+                
+                document.querySelector(".theme_selector_button2").addEventListener("mouseleave",function()
+                {
+                document.querySelector(".theme_selector_button2").style.color = "white"
+                })
+                
+                document.querySelector(".theme_selector_button2").addEventListener("click",function()
+                {
+                //720이 2번째 칸
+                window.scroll({top:1900, behavior : "smooth"})
+                })
+                
+                
+                
+                
+                
+                document.querySelector(".theme_selector_button3").addEventListener("mouseover",function()
+                {
+                document.querySelector(".theme_selector_button3").style.color = "#E7D2B5"
+                })
+                
+                document.querySelector(".theme_selector_button3").addEventListener("mouseleave",function()
+                {
+                document.querySelector(".theme_selector_button3").style.color = "white"
+                })
+                
+                document.querySelector(".theme_selector_button3").addEventListener("click",function()
+                {
+                //720이 2번째 칸
+                window.scroll({top:9999, behavior : "smooth"})
+                })
+                
+                
+                document.querySelector(".theme_selector_button4").addEventListener("mouseover",function()
+                {
+                document.querySelector(".theme_selector_button4").style.color = "#E7D2B5"
+                })
+                
+                document.querySelector(".theme_selector_button4").addEventListener("mouseleave",function()
+                {
+                document.querySelector(".theme_selector_button4").style.color = "white"
+                })
+                
+                
+                
+                
+                document.querySelector(".theme_selector_button5").addEventListener("mouseover",function()
+                {
+                document.querySelector(".theme_selector_button5").style.color = "#E7D2B5"
+                })
+                
+                document.querySelector(".theme_selector_button5").addEventListener("mouseleave",function()
+                {
+                document.querySelector(".theme_selector_button5").style.color = "white"
+                })
+                </script>
+            </div>
+            
+
+  
+            
+            
+            <div class = "contact_page">
+                <style>
+                .contact_page_box
+                {
+                background : #02050C;
+                width : var(--window_width);
+                margin-left : 0px;
+                margin-right : 0px;
+                height: var(--text_100px);
+                margin-top: var(--contact_box_margin);
+                margin-bottom : -8px;
+                }
+                
+                .github_icon
+                {
+                position : absolute;
+                margin-top : -64px;
+                margin-left : var(--contact_button1_pos);
+                filter : brightness(0.7);
+                transition : filter 0.2s;
+                }
+                
+                .discord_icon
+                {
+                position : absolute;
+                margin-top : -65px;
+                margin-left : var(--contact_button2_pos);
+                filter : brightness(0.7);
+                transition : filter 0.2s;
+                }
+                
+                .youtube_icon
+                {
+                position : absolute;
+                margin-top : -58px;
+                margin-left : var(--contact_button3_pos);
+                filter : brightness(0.7);
+                transition : filter 0.2s;
+                }
+                </style>
+                
+                
+                
+                <div class = "contact_page_box">
+                </div>
+
+                
+
+                <a href = "https://discord.com/invite/fxyyZCTaBS">
+                    <img class = "discord_icon" src = "imgs/discord_icon_white.png" width = 36px height = 36px loading = "lazy">
+                </a>
+
+
+                <a class = "youtube_icon" href = "https://www.youtube.com/@fractionaluprising">
+                    <img src = "imgs/youtube_icon_white.png" width = 36px height = 25px loading = "lazy">
+                </a>
+                
+                
+                <script>
+                document.querySelector(".github_icon").addEventListener("mouseover",function()
+                {
+                document.querySelector(".github_icon").style.filter = "brightness(1)"
+                })
+                
+                document.querySelector(".github_icon").addEventListener("mouseleave",function()
+                {
+                document.querySelector(".github_icon").style.filter = "brightness(0.7)"
+                })
+                
+                
+                
+                document.querySelector(".discord_icon").addEventListener("mouseover",function()
+                {
+                document.querySelector(".discord_icon").style.filter = "brightness(1)"
+                })
+                
+                document.querySelector(".discord_icon").addEventListener("mouseleave",function()
+                {
+                document.querySelector(".discord_icon").style.filter = "brightness(0.7)"
+                })
+                
+                
+                
+                document.querySelector(".youtube_icon").addEventListener("mouseover",function()
+                {
+                document.querySelector(".youtube_icon").style.filter = "brightness(1)"
+                })
+                
+                document.querySelector(".youtube_icon").addEventListener("mouseleave",function()
+                {
+                document.querySelector(".youtube_icon").style.filter = "brightness(0.7)"
+                })
+                </script>
+            </div>
+        </div>
+        
+        
+        
+         
+        <style>
+        :root
+        {
+        --text_size : 1;
+        --text_title_s_align : "right";
+        --text_margin_left_s : 520px;
+        --text_margin_top_s : 0px;
+        --trailer_bg_margin_left : -8px;
+        --theme_selector1_pos : 77%;
+        --theme_selector2_pos : 71%;
+        --theme_selector3_pos : 66%;
+        --theme_selector4_pos : 58.5%;
+        --theme_selector5_pos : 56%;
+        --mid_pos : 0px;
+        --contact_button1_pos : 75%;
+        --contact_button2_pos : 71.8%;
+        --contact_button3_pos : 68.6%;
+        --window_width : 100%;
+        --desc_margin : 85px;
+        --title_margin : 0px;
+        --text_64px : 64px;
+        --text_16px : 16px;
+        --text_48px : 48px;
+        --text_24px : 24px;
+        --text_32px : 32px;
+        --text_17_5px : 17.5px;
+        --text_28px : 28px;
+        --text_12px : 12px;
+        --text_10px : 10px;
+        --text_m12px : -12px;
+        --text_m32px : -32px;
+        --size_100vw : 100vw;
+        --theme_selector1_bg : #547282; 
+        --theme_selector_margin : 0px;
+        --img_width : 0px;
+        --img_height : 0px;
+        --trailer_button_pos : 39.5%;
+        --contact_box_margin : 440px;
+        --text_270px : 270px;
+        --text_100px : 100px;
+        --text_485px : 485px;
+        --showcase_title_margin : 0px;
+        --showcase_title_margin2 : 0px;
+        }
+        </style>
+         
+        <script type = "text/javascript">
+            
+        document.addEventListener("mousemove",function()
+        {
+        reset_scroll_xpos()
+        })
+        document.addEventListener("mousewheel",function()
+        {
+        reset_scroll_xpos()
+        })
+
+
+        function reset_scroll_xpos()
+        {
+        window.scroll(0,scrollY)
+        }
+
+
+        reset_pos_by_win()
+        function reset_pos_by_win()
+        {
+        var c_w = window.innerWidth;
+        var size_scale = c_w/1280;
+        var size_scale_sec = c_w/896;
+        var size_scale_thi = c_w/640;
+        var size_scale_for = c_w/522;
+        var mid_pos_real = (1920-c_w)*0.5;
+        var text_size;
+        
+        document.documentElement.style.setProperty("--window_height",window.innerHeight)
+            if (c_w < 975)
+            {
+            var margin_scale = 1920/c_w;
+            document.documentElement.style.setProperty("--title_margin","-32px")
+            document.documentElement.style.setProperty("--text_title_s_align","left")
+            document.documentElement.style.setProperty("--text_margin_left_s",-8*margin_scale+"px")
+            document.documentElement.style.setProperty("--text_margin_top_s",32*margin_scale+"px")
+            document.documentElement.style.setProperty("--desc_margin","8px")
+            
+            document.documentElement.style.setProperty("--theme_selector1_bg","#ffffff00")
+            document.documentElement.style.setProperty("--theme_selector4_pos",c_w*size_scale-73+"px")
+            document.documentElement.style.setProperty("--theme_selector5_pos",-512+"px")
+            document.documentElement.style.setProperty("--theme_selector3_pos",c_w*size_scale+25+"px")
+            document.documentElement.style.setProperty("--theme_selector2_pos",c_w*size_scale+87+"px")
+            document.documentElement.style.setProperty("--theme_selector1_pos",c_w*size_scale+147+"px")
+            document.documentElement.style.setProperty("--theme_selector_margin","0px")
+            
+            
+            document.documentElement.style.setProperty("--contact_button1_pos","37.5%")
+            document.documentElement.style.setProperty("--contact_button2_pos","47.5%")
+            document.documentElement.style.setProperty("--contact_button3_pos","57.5%")
+            
+            
+            document.documentElement.style.setProperty("--img_width",1024*size_scale+"px")
+            document.documentElement.style.setProperty("--img_height",576*size_scale+"px")
+            
+            
+            document.documentElement.style.setProperty("--trailer_button_pos","17%")
+            
+            
+            document.documentElement.style.setProperty("--contact_box_margin",mid_pos_real*0.8+"px")
+            
+            
+            document.documentElement.style.setProperty("--showcase_title_margin",16*margin_scale+"px")
+            document.documentElement.style.setProperty("--showcase_title_margin2",42*margin_scale+"px")
+            }
+            else
+            {
+            size_scale = 1;
+            size_scale_sec = 1;
+            size_scale_thi = 1;
+            size_scale_for = 1.1;
+            document.documentElement.style.setProperty("--title_margin","32px")
+            document.documentElement.style.setProperty("--text_title_s_align","right")
+            document.documentElement.style.setProperty("--text_margin_left_s","520px")
+            document.documentElement.style.setProperty("--text_margin_top_s","64px")
+            document.documentElement.style.setProperty("--desc_margin","85px")
+            
+            document.documentElement.style.setProperty("--theme_selector1_bg","#547282")
+            document.documentElement.style.setProperty("--theme_selector1_pos","77%")
+            document.documentElement.style.setProperty("--theme_selector2_pos","71%")
+            document.documentElement.style.setProperty("--theme_selector3_pos","66%")
+            document.documentElement.style.setProperty("--theme_selector4_pos","58.5%")
+            document.documentElement.style.setProperty("--theme_selector5_pos","52%")
+            document.documentElement.style.setProperty("--theme_selector_margin","0px")
+            
+            
+            document.documentElement.style.setProperty("--contact_button1_pos","75%")
+            document.documentElement.style.setProperty("--contact_button2_pos","71.8%")
+            document.documentElement.style.setProperty("--contact_button3_pos","68.6%")
+            
+            
+            document.documentElement.style.setProperty("--img_width","640px")
+            document.documentElement.style.setProperty("--img_height","360px")
+            
+            
+            document.documentElement.style.setProperty("--trailer_button_pos","40%")
+            
+            
+            document.documentElement.style.setProperty("--contact_box_margin","440px")
+            
+            
+            document.documentElement.style.setProperty("--showcase_title_margin","0px")
+            document.documentElement.style.setProperty("--showcase_title_margin2","0px")
+            }
+            
+        
+        document.documentElement.style.setProperty("--text_64px",64*size_scale_thi+"px")
+        document.documentElement.style.setProperty("--text_48px",48*size_scale_sec+"px")
+        document.documentElement.style.setProperty("--text_32px",32*size_scale_for+"px")
+        document.documentElement.style.setProperty("--text_28px",28*size_scale_thi+"px")
+        document.documentElement.style.setProperty("--text_24px",24*size_scale_thi+"px")
+        document.documentElement.style.setProperty("--text_16px",16*size_scale_for+"px")
+        document.documentElement.style.setProperty("--text_17_5px",17.5*size_scale_for+"px")
+        document.documentElement.style.setProperty("--text_12px",12*size_scale_for+"px")
+        document.documentElement.style.setProperty("--text_10px",12*size_scale_for+"px")
+        document.documentElement.style.setProperty("--text_m12px",-12*size_scale_for+"px")
+        document.documentElement.style.setProperty("--text_m32px",-32/(c_w/1980)+"px")
+        document.documentElement.style.setProperty("--size_100vw",100*size_scale_sec+"vw")
+        document.documentElement.style.setProperty("--text_270px",270*size_scale_for+"px")
+        document.documentElement.style.setProperty("--text_100px",100*size_scale_thi+"px")
+        document.documentElement.style.setProperty("--text_485px",485*size_scale_for+"px")
+
+        text_size = (137*size_scale)+"px";
+        console.log(text_size)
+
+        document.documentElement.style.setProperty("--text_size",text_size)
+        var cal_trailer_bg_xpos = (-mid_pos_real)+"px"
+        var total_mid_value = -mid_pos_real+"px"
+        document.documentElement.style.setProperty("--trailer_bg_margin_left",cal_trailer_bg_xpos)
+        document.documentElement.style.setProperty("--mid_pos",total_mid_value)
+        
+
+        document.documentElement.style.setProperty("--window_width",c_w+"px")
+        console.log(total_mid_value)
+
+        reset_scroll_xpos()
+        }
+
+
+        $(window).resize(function()
+        {
+        reset_pos_by_win()
+        })
+        </script>
+    </body>
+    
+    
+    
+    
+    
+    <!-- Loading bar -->
+    <body>
+        <style>
+        
+        .trailer_video
+        {
+        overflow: hidden;
+        height : var(--window_height);
+        }
+        
+        
+        .loading_bar_bg
+        {
+        position : fixed;
+        width : 1920px;
+        height : 1080px;
+        top : 0px;
+        margin-left : -8px;
+        background : white;
+        transition : width 1.5s, opacity 1s;
+        }
+        
+        .loading_bar_grad
+        {
+        position : fixed;
+        background-image: linear-gradient(to right,#bdbdbd,#466074,#263b4b,#192731,#547282,#b2d7eb,#547282,#192731);
+        margin-left : -8px;
+        width : 1920px;
+        height : 2px;
+        top : var(--text_485px);
+        }
+        
+        .loading_bar
+        {
+        top : var(--text_485px);
+        position : fixed;
+        width : 0px;
+        height : 2px;
+        margin-left : -8px;
+        background : white;
+        transition : width 1.5s;
+        }
+        </style>
+
+        <script>
+        var loaded_page = false;
+        
+        function loading_now()
+        {
+        loading_bar.style.width = window.innerWidth+"px";
+        setTimeout(show_page_anime,1500)
+        }
+        
+        var video_ele = document.getElementById("trailer_video")
+        video_ele.onloadeddata = function()
+        {
+        console.log("loaded_video");
+        document.getElementById("loading_bar").style.transition = "width 1s";
+        setTimeout(show_page_anime,1000);
+        }
+        
+        window.onload = function()
+        {
+        loading_now()
+        }
+        
+        $(window).resize(function()
+        {
+            if (!loaded_page)
+            {
+            loading_now()
+            }
+        })
+
+        function show_page()
+        {
+        setTimeout(set_height,1000)
+        loaded_page = true;
+        window.scroll(0,0)
+        
+        document.getElementById("loading_bar_bg").style.opacity = 0;
+        document.getElementById("loading_bar").style.opacity = 0;
+        document.getElementById("loading_bar_grad").style.opacity = 0;
+        document.getElementById("trailer_bg").style.filter = "blur(0px)";
+        console.log("page_loaded");
+        }
+        
+        
+        function set_height()
+        {
+        document.getElementById("loading_bar_bg").style.height = 0;
+        document.getElementById("loading_bar").style.height = 0;
+        document.getElementById("loading_bar_grad").style.height = 0;
+        document.getElementById("trailer_bg").style.transition = "filter 0.2s";
+        setTimeout(title1_anime,1600)
+        setTimeout(title2_anime,1800)
+        setTimeout(title_desc_anime,2000)
+        setTimeout(theme_selector_anime,2500)
+        }
+        
+        
+        function title1_anime()
+        {
+        document.getElementById("title").style.opacity = 1;
+        document.getElementById("title").style.top = "0px";
+        }
+        
+        function title2_anime()
+        {
+        document.getElementById("title_small1").style.opacity = 1;
+        document.getElementById("title_small1").style.top = "260px";
+        }
+        
+        function title_desc_anime()
+        {
+        document.getElementById("desc_first").style.opacity = 1;
+        document.getElementById("desc_first").style.top = "450px";
+        }
+        
+        function theme_selector_anime()
+        {
+        document.getElementById("theme_selector_button1").style.opacity = 1;
+        document.getElementById("theme_selector_button2").style.opacity = 1;
+        document.getElementById("theme_selector_button3").style.opacity = 1;
+        document.getElementById("theme_selector_button4").style.opacity = 1;
+        document.getElementById("theme_selector_button5").style.opacity = 1;
+        document.getElementById("body_t").style.overflowY = "scroll";
+        }
+        
+        
+        $(window).scroll(function()
+        {
+        var scroll = $(window).scrollTop();
+            if (scroll > 600)
+            {
+            setTimeout(review_bg_anime,100)
+            setTimeout(review1_anime,900)
+            setTimeout(review2_anime,1000)
+            setTimeout(review3_anime,1100)
+            setTimeout(review4_anime,1200)
+            setTimeout(reviewer_anime,1500)
+            }
+            
+            if (scroll > 1200)
+            {
+            setTimeout(showcase_bg_anime,100)
+            setTimeout(showcase_text1_anime,900)
+            setTimeout(showcase_text2_anime,1000)
+            setTimeout(showcase_image_anime,1500)
+            setTimeout(selector_buttons_anime,1600)
+            setTimeout(showcase_test_anime,2000)
+            setTimeout(showcase_button_anime,3000)
+            }
+        })
+
+        function review_bg_anime()
+        {
+        document.getElementById("reviews").style.width = window.innerWidth+"px";
+        }
+        
+        function review1_anime()
+        {
+        document.getElementById("review1").style.opacity = 1;
+        document.getElementById("review1").style.top = "0px";
+        }
+        
+        function review2_anime()
+        {
+        document.getElementById("review2").style.opacity = 1;
+        document.getElementById("review2").style.top = "0px";
+        }
+        
+        function review3_anime()
+        {
+        document.getElementById("review3").style.opacity = 1;
+        document.getElementById("review3").style.top = "0px";
+        }
+        
+        function review4_anime()
+        {
+        document.getElementById("review4").style.opacity = 1;
+        document.getElementById("review4").style.top = "0px";
+        }
+        
+        function reviewer_anime()
+        {
+        var _ele_reviewer = document.getElementById("reviewer");
+            if (_ele_reviewer.style.opacity != 1)
+            {
+            _ele_reviewer.style.opacity = 1;
+            setTimeout(reviewer_anime2,350)
+            }
+        }
+        
+        function reviewer_anime2()
+        {
+        document.getElementById("reviewer").style.color = "white";
+        setTimeout(reviewer_anime3,50)
+        }
+        
+        function reviewer_anime3()
+        {
+        document.getElementById("reviewer").style.transition = "color 0.5s";
+        document.getElementById("reviewer").style.color = "#AD8264";
+        }
+        
+        
+        
+        
+        function showcase_bg_anime()
+        {
+        document.getElementById("select_menu").style.width = window.innerWidth+"px";
+        document.getElementById("in_box_text").style.width = window.innerWidth+"px";
+        }
+        
+        function showcase_text1_anime()
+        {
+        document.getElementById("title_sec").style.opacity = 1;
+        document.getElementById("title_sec").style.top = "0px";
+        }
+        
+        function showcase_text2_anime()
+        {
+        document.getElementById("title_sec_small").style.opacity = 1;
+        document.getElementById("title_sec_small").style.top = "0px";
+        }
+        
+        function showcase_image_anime()
+        {
+        document.getElementById("showcase1_image").style.opacity = 1;
+        }
+        
+        function selector_buttons_anime()
+        {
+        document.getElementById("selector_buttons").style.opacity = 1;
+        }
+        
+        function showcase_test_anime()
+        {
+        document.getElementById("under_box_selector_buttons").style.opacity = 1;
+        }
+        
+        
+        //쇼케이스1 다운로드 버튼
+        function showcase_button_anime()
+        {
+        document.getElementById("showcase1_trailer_button").style.opacity = 1;
+        
+        document.getElementById("showcase1_code_button").style.opacity = 1;
+        }
+        
+        
+        
+        
+        
+        function show_page_anime()
+        {
+        document.getElementById("loading_bar_bg").style.background = "#02050C";
+        document.getElementById("loading_bar").style.background = "#02050C";
+        document.getElementById("loading_bar_bg").style.transition = "background 1s, width 1s, opacity 1s";
+        document.getElementById("loading_bar").style.transition = "background 1s, width 1s";
+        window.scroll(0,0)
+        setTimeout(show_page,1000)
+        }
+
+        </script>
+        
+        
+        <div id = "loading_bar_bg" class = "loading_bar_bg"></div>
+        <div id = "loading_bar_grad" class = "loading_bar_grad"></div>
+        <div id = "loading_bar" class = "loading_bar"></div>
+    </body>
+</html>
